@@ -1,0 +1,98 @@
+
+html {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #aaa;
+  transition: .35s ease all;
+  &:hover {
+    color: #222;
+    transition: .1s ease all;
+  }
+}
+
+nav {
+  padding: 2rem;
+
+  a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    &:hover {
+      border-color: #222;
+    }
+  }
+}
+
+
+#app {
+  padding: 2rem;
+}
+
+
+//forms
+input {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin: 0 0 .2rem 0;
+}
+textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin: 0 0 .2rem 0;
+  display: block;
+}
+button {
+  cursor: pointer;
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: #222;
+  background: #eee;
+  margin: .2rem 0 1rem 0;
+  transition: .35s ease all;
+  &:hover {
+    color: #eee;
+    background: #222;
+    transition: .1s ease all;
+  }
+}
+
+
+.blog-reader {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.reader-nav {
+  float: left;
+  width: 8rem;
+}
+
+.blog-article {
+  margin-left: 8rem;
+}
+
+.blog-post-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    padding: .5rem;
+  }
+}
