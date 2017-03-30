@@ -61,7 +61,7 @@ export default function app() {
   store.add(update);
   store.add(render);
 
-  store.fire('goToBlogReader'); 
+  // store.fire('goToBlogReader'); 
 
   $('.submit-blog-link').on('click', () => { store.fire('goToBlogSubmission'); } );
   $('.add-person-link').on('click', () => { store.fire('goToPersonSubmit'); } );
