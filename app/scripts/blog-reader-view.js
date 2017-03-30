@@ -51,6 +51,9 @@ export default function BlogReaderView() {
     };
     $.ajax(deleteSettings).then( () => {
       $articleContainer.html('');
+      let $linkToRemove = $('.blog-post-links').find(`[data-post-id=${id}]`);
+      $linkToRemove.parent().remove();
+      console.log($linkToRemove);
     });
   };
 

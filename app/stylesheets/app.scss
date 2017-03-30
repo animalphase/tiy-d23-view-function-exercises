@@ -66,6 +66,11 @@ button {
     background: #222;
     transition: .1s ease all;
   }
+  &:disabled, &:disabled:hover {
+    color: #222;
+    background: #eee;
+    opacity: .3;
+  }
   &.delete-post {
     margin-top: 2rem;
   }
