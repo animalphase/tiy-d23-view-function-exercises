@@ -66,6 +66,9 @@ button {
     background: #222;
     transition: .1s ease all;
   }
+  &.delete-post {
+    margin-top: 2rem;
+  }
 }
 
 
@@ -79,11 +82,12 @@ button {
 
 .reader-nav {
   float: left;
-  width: 8rem;
+  width: 9rem;
+  padding-right: 1rem;
 }
 
 .blog-article {
-  margin-left: 8rem;
+  margin-left: 9rem;
 }
 
 .blog-post-links {
