@@ -2,7 +2,7 @@
 
 import submitData from './ajax.js';
 
-export default function BlogView() {
+export default function BlogView(store) {
   let $blogViewContent =
      $(`<section class="blog-authoring">
           <h1>Blog form</h1>
@@ -24,6 +24,7 @@ export default function BlogView() {
 
   const confirmBlogPostSubmission = () => {
     console.log('✅ blog post submission successful! 👍🏻');
+    store.fire('goToBlogReader');
   };
 
   const welcomeMessage = (name) => {
@@ -34,8 +35,7 @@ export default function BlogView() {
     e.preventDefault();
     e.target.disabled = true;
     submitData(assembleBlogData(), 'blog', confirmBlogPostSubmission);
-    $blogViewContent.find('.blog-title').val('');
-    $blogViewContent.find('.blog-body').val('');
+    $blogViewContent.html('<h2>Submitting post…</h2>');
   });
 
   return $blogViewContent;

@@ -52,7 +52,7 @@ export default function app() {
   const render = function (state, event, data) {
     if(event === 'renderToScreen'){
       console.log(`render() rendering to screen: ${state.view.name}`);
-      $('#app').html(new state.view());
+      $('#app').html(new state.view(store));
     }
   };
 
@@ -61,7 +61,7 @@ export default function app() {
   store.add(update);
   store.add(render);
 
-  // store.fire('goToBlogReader'); 
+  // store.fire('goToBlogReader');
 
   $('.submit-blog-link').on('click', () => { store.fire('goToBlogSubmission'); } );
   $('.add-person-link').on('click', () => { store.fire('goToPersonSubmit'); } );
